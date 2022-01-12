@@ -6,7 +6,7 @@ const PORT = process.env.PORT || 3001;
 
 // routers
 
-const homeRouter = require('./routes/home');
+const apiRouter = require('./routes/api');
 const errorRouter = require('./routes/error-page');
 
 // BODY PARSER
@@ -15,7 +15,7 @@ app.use(express.json());
 
 //displaying pages using routers
 
-app.use('/', homeRouter);
+app.use('/api', apiRouter);
 app.use('/*', errorRouter);
 
 
