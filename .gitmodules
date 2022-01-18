@@ -1,0 +1,3 @@
+[submodule "covid19_vaccination_registration_app_express_react"]
+	path = covid19_vaccination_registration_app_express_react
+	url = https://github.com/OlaShabalina/covid19_vaccination_registration_app_express_react.git
