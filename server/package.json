@@ -11,9 +11,9 @@
   "scripts": {
     "dev": "nodemon -r dotenv/config server.js",
     "start": "node -r dotenv/config server.js",
-    "create-db": "psql -U postgres -f sql/create-db.sql",
-    "create-table": "psql -U postgres -d covid19_reg -f sql/create-table.sql",
-    "seed-table": "psql -U postgres -d covid19_reg -f sql/seed-table.sql",
+    "create-db": "psql -U postgres -f db/sql/create-db.sql",
+    "create-table": "psql -U postgres -d covid19_reg -f db/sql/create-table.sql",
+    "seed-table": "psql -U postgres -d covid19_reg -f db/sql/seed-table.sql",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",

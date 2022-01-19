@@ -1,13 +1,13 @@
 const express = require('express');
 const router = express.Router();
-const db = require('../database');
+const { generateListFromDB, insertUserIntoDB } = require('../db/db.queries');
+const { isDateValid, isNameValid } = require('../utils/functions');
 
 router.get('/', async (req, res) => {
 
-    try {
-        
-        const usersList = await db.any("SELECT users_name, TO_CHAR(entry_date, 'DD/MM/YYYY') AS reg_date FROM reg_users ORDER BY entry_date;");
-
+    try {       
+        // generate a list from db
+        const usersList = await generateListFromDB();
         res.json({ usersList });
 
     } catch(error) {
@@ -42,8 +42,9 @@ router.post('/', async (req, res) => {
 
         try {
 
-            await db.none("INSERT INTO reg_users (users_name, entry_date) VALUES ($1, $2);", [nameCleared, dateCleared])
-            
+            // insert new user into db
+            await insertUserIntoDB(nameCleared, dateCleared);
+
             // the reason we send a success message this was is to maintain the same format as error messages so we can have less code to render is from the frontend
             res.json({ 
                 success: [
@@ -58,20 +59,5 @@ router.post('/', async (req, res) => {
 
 
 })
-
-
-
-function isNameValid(name) {
-    const specialChars = /[`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/;
-    return !specialChars.test(name); 
-}
-
-function isDateValid(date) {
-
-    const dateCrleared = new Date(date)
-    const today = new Date(new Date().toDateString()); 
-
-    return dateCrleared >= today;
-}
 
 module.exports = router;
