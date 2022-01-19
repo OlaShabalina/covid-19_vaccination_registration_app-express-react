@@ -24,7 +24,7 @@ router.post('/', async (req, res) => {
     const nameCleared = name.trim();
 
     // Back-end validation array for the form
-    let errors = [];
+    const errors = [];
 
     // All fields should be filled
     if (!nameCleared || !dateCleared ) errors.push({ message: "Please enter all fields." });
