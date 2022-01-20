@@ -8,10 +8,10 @@ router.get('/', async (req, res) => {
     try {       
         // generate a list from db
         const usersList = await generateListFromDB();
-        res.json({ usersList });
+        res.status(200).json({ usersList });
 
     } catch(error) {
-        res.json({ error });
+        res.status(500).json({ error });
     }
     
 });
@@ -36,7 +36,7 @@ router.post('/', async (req, res) => {
     // if there are errors - we will display them to the user and won't save it to the database
     if (errors.length > 0) {
 
-        res.json({ errors })
+        res.status(200).json({ errors })
         
     } else {
 
@@ -46,14 +46,14 @@ router.post('/', async (req, res) => {
             await insertUserIntoDB(nameCleared, dateCleared);
 
             // the reason we send a success message this was is to maintain the same format as error messages so we can have less code to render is from the frontend
-            res.json({ 
+            res.status(200).json({ 
                 success: [
                     { message: "New User has been added to the list." }
                 ] 
             })
 
         } catch (error) {
-            console.log({ error });
+            res.status(500).json({ error });
         }
     }
 
