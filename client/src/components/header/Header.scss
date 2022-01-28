@@ -1,0 +1,28 @@
+@import '../../global.scss';
+
+.header {
+
+  .img-container {
+    width: 70px;
+    padding: 10px;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .nav-bar-links {
+    justify-content: end;
+
+    .nav-link {
+      color: #e38503;
+      font-size: 19px;
+    }
+  }
+
+  h1 {
+    font-size: 27px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}

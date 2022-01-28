@@ -1,0 +1,50 @@
+@import '../../global.scss';
+
+.user-form {
+  width: 100%;
+  max-width: 600px;
+
+  .success-error-note {
+    font-style: italic;
+    color: gray;
+  }
+
+  .buttons-container {
+    flex-wrap: wrap;
+
+    #check-in-button {
+      background-color: $borderColor;
+      outline: 2px solid rgb(231, 231, 231);
+      border: none;
+      color: $lightColor;
+      height: 50px;
+      width: 47%;
+      min-width: 110px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  
+      .checkin-logo {
+        width: 20px;
+        margin-right: 10px;
+        border: none;
+
+      }
+
+      &:hover {
+        background-color: gray;
+        outline: 2px solid rgb(231, 231, 231);
+
+      }
+  
+    }
+  
+ 
+  }
+
+  .interesting-fact {
+    margin-top: 32px;
+    color: gray;
+    font-style: italic;
+  }
+}
