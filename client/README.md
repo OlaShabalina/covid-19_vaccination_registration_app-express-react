@@ -1,70 +1,50 @@
-# Getting Started with Create React App
+# Covid-19 Registration App - React, Express, PostgreSQL
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+Front-end part of the full stack application. It's created using React JS front-end, Sass &amp; Bootstrap for styling, and Express JS and PostgreSQL Database as a backend. 
+The reason for creating this app is to learn how to connect React front-end and Express/SQL back-end.
 
-In the project directory, you can run:
+Repo with the entire project: https://github.com/OlaShabalina/covid19_vaccination_registration_app_express_react
 
-### `npm start`
+## Version
+1.0.0
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Usage
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Installation
 
-### `npm test`
+Install the dependencies inside Client and Server folders separately
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```sh
+$ npm install
+```
 
-### `npm run build`
+### Start
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Inside Client folder: 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```sh
+$ npm start
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Inside Server folder: 
 
-### `npm run eject`
+```sh
+$ npm run dev
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Screenshots
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+* App Overview
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+![image](https://user-images.githubusercontent.com/88268603/151636606-a354d500-f66a-4788-88d2-7c83e5a511a3.png)
+* Validation - coming from back-end
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+![image](https://user-images.githubusercontent.com/88268603/151636630-e6a09da7-5794-4744-9b37-c00394165ad8.png)
+* Additional feature - displaying a historical event based on the date of check-in.
 
-## Learn More
+![image](https://user-images.githubusercontent.com/88268603/151636673-eb11c3d4-0ff8-45fc-b1ac-e19ce6a8ac9f.png)
+* List of checked-in users from the database ordered by date
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+![image](https://user-images.githubusercontent.com/88268603/151636772-c842fadb-fb42-44ef-ac51-c114aa432660.png)
